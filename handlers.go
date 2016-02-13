@@ -1,7 +1,7 @@
 package kbase
 
 import (
-	"./rpc"
+	"github.com/gl-works/kbase/rpc"
 	"github.com/vektra/errors"
 	"golang.org/x/net/context"
 )

@@ -1,7 +1,7 @@
 package kbase
 
 import (
-	"./rpc"
+	"github.com/gl-works/kbase/rpc"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"net"
