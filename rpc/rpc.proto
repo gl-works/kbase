@@ -1,0 +1,33 @@
+// protoc --go_out=plugins=grpc:.  src/rpc/rpc.proto
+
+syntax = "proto3";
+
+package rpc;
+
+service KeyService {
+    rpc HandleOffer (Offer) returns (KeyResponse) {}
+    rpc HandleRevoke (Revoke) returns (KeyResponse) {}
+    rpc HandlePoll (Poll) returns (KeyResponse) {}
+}
+
+message KeyResponse {
+    map<string, bytes> values = 1;
+}
+
+message Offer {
+    string space = 1;
+    string key = 2;
+    string server = 3;
+    bytes value = 4;
+}
+
+message Revoke {
+    string space = 1;
+    string key = 2;
+    string server = 3;
+}
+
+message Poll {
+    string space = 1;
+    string key = 2;
+}
