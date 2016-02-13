@@ -1,8 +1,8 @@
 package kbase
 
 import (
-	"github.com/gl-works/kbase/rpc"
 	"github.com/Sirupsen/logrus"
+	"github.com/gl-works/kbase/rpc"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"strconv"
